@@ -1,43 +1,336 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste GitHub Pages</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: white;
-            display: flex;
-            height: 100vh;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .card {
-            background: #222;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-        }
+<title>Edward - Portfolio</title>
 
-        h1 {
-            color: #82AAFF;
-        }
+<style>
 
-        p {
-            color: #ccc;
-        }
-    </style>
+:root {
+    --primary: #82AAFF;
+    --surface: #111318;
+    --surface2: #1b1b21;
+    --text: #e6e1e5;
+    --subtext: #cac4d0;
+}
+
+* {
+    box-sizing:border-box;
+    font-family:
+        "Google Sans",
+        "Inter",
+        system-ui,
+        sans-serif;
+}
+
+
+body {
+    margin:0;
+    background:
+        radial-gradient(
+            circle at top,
+            #344563,
+            var(--surface)
+        );
+
+    color:var(--text);
+}
+
+
+/* barra superior estilo GNOME */
+
+.header {
+
+    height:80px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 8%;
+
+}
+
+
+.logo {
+
+    font-size:25px;
+    font-weight:700;
+
+}
+
+
+.nav {
+
+    background:rgba(255,255,255,.08);
+
+    padding:10px 20px;
+
+    border-radius:40px;
+
+    backdrop-filter:blur(20px);
+
+}
+
+
+/* conteúdo */
+
+.container {
+
+    max-width:1100px;
+    margin:auto;
+    padding:60px 30px;
+
+}
+
+
+
+.hero {
+
+    display:grid;
+    grid-template-columns:1fr 350px;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+
+
+h1 {
+
+    font-size:60px;
+    margin:0;
+
+}
+
+
+h1 span {
+
+    color:var(--primary);
+
+}
+
+
+p {
+
+    color:var(--subtext);
+
+    font-size:20px;
+
+}
+
+
+/* cards GTK */
+
+.card {
+
+    background:
+    rgba(255,255,255,.07);
+
+    border-radius:28px;
+
+    padding:30px;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+}
+
+
+.profile {
+
+    text-align:center;
+
+}
+
+
+.avatar {
+
+    width:150px;
+    height:150px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #82AAFF,
+        #c58af9
+    );
+
+}
+
+
+/* projetos */
+
+.projects {
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+.project h3 {
+
+    color:var(--primary);
+
+}
+
+
+button {
+
+    background:var(--primary);
+
+    border:0;
+
+    padding:14px 25px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+</style>
+
 </head>
 
+
 <body>
-    <div class="card">
-        <h1>Funcionou 🚀</h1>
-        <p>Meu primeiro teste com GitHub Pages.</p>
-        <p>SSH configurado com sucesso.</p>
-    </div>
+
+
+<header class="header">
+
+<div class="logo">
+EdwardZeroV2
+</div>
+
+
+<div class="nav">
+Home · Projetos · Contato
+</div>
+
+</header>
+
+
+
+<main class="container">
+
+
+<section class="hero">
+
+
+<div>
+
+<h1>
+Olá, eu sou
+<span>Eduardo Rod.</span>
+</h1>
+
+<p>
+Desenvolvedor focado em Linux,
+DevOps e tecnologias open source.
+</p>
+
+
+<button>
+Ver projetos
+</button>
+
+
+</div>
+
+
+
+<div class="card profile">
+
+<div class="avatar"></div>
+
+<h2>
+Linux • Cloud • DevOps
+</h2>
+
+<p>
+Archlinux / Fedora / Opensuse
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="projects">
+
+
+<div class="card project">
+
+<h3>
+🐧 Linux
+</h3>
+
+<p>
+Customizações de sistemas,
+DevOps, shell e automação.
+</p>
+
+</div>
+
+
+
+<div class="card project">
+
+<h3>
+☁ DevOps
+</h3>
+
+<p>
+Containers, CI/CD,
+infraestrutura e servidores.
+</p>
+
+</div>
+
+
+
+<div class="card project">
+
+<h3>
+💻 Desenvolvimento
+</h3>
+
+<p>
+Projetos web e ferramentas.
+</p>
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
 </body>
 </html>
