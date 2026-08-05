@@ -1,0 +1,106 @@
+:root {
+    --background: #161618;
+    --surface: #1a1a1c;
+    --surface-active: #d1d1d1;
+    --text: #c6c6c6;
+    --text-highlight: #dfe0e0;
+    --text-on-active: #161618;
+}
+
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Base */
+
+body {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+    font-family:
+    "Monaspace Neon NF",
+    monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estrutura principal */
+
+.app {
+    width: min(94%, 1000px);
+    min-height: 100vh;
+    margin: auto;
+}
+
+
+/* Cabeçalho */
+
+.header {
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    padding:24px 0;
+}
+
+/* Tabs */
+
+.tabs {
+    display: flex;
+    gap: 6px;
+    padding: 6px;
+    background: var(--surface);
+    border-radius: 12px;
+}
+
+
+.tab {
+    border:none;
+    background:transparent;
+    color:var(--text);
+    font-family:inherit;
+    padding:4px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+
+.tab.active {
+    background:var(--surface-active);
+    color:var(--text-on-active);
+}
+
+
+/* Área de conteúdo */
+
+.content {
+    margin-top: -12px;
+}
+
+.page {
+    min-height:500px;
+    padding:30px;
+    background:var(--surface);
+    border-radius:20px;
+    animation: page-in .25s ease;
+}
+
+@keyframes page-in {
+    from {
+        opacity:0;
+        transform:translateY(8px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
