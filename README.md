@@ -1,9 +1,7 @@
 # Eduardo Rod
 
 My personal portfolio, built to showcase my projects, interests, and work in software development.
-
 The interface takes inspiration from my KDE desktop environment, bringing the same minimalist and monochromatic aesthetic to the web.
-
 Built with **HTML, CSS, and JavaScript**, with no frameworks or external UI libraries..
 
 **Website:** [edwardzerov2.github.io](https://edwardzerov2.github.io)
