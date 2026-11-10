@@ -1,8 +1,8 @@
-# Eduardo Rod
+# Digital Space
 
-My personal portfolio, built to showcase my projects, interests, and work in software development.
-The interface takes inspiration from my KDE desktop environment, bringing the same minimalist and monochromatic aesthetic to the web.
-Built with **HTML, CSS, and JavaScript**, with no frameworks or external UI libraries..
+A personal corner of the internet where I showcase my projects, interests, and experiments.<br>
+Bringing the MonoYou design philosophy beyond the desktop, exploring a consistent monochromatic experience across digital environments.<br>
+Built with HTML, CSS, and JavaScript, without frameworks or external UI libraries.<br>
 
 **Website:** [edwardzerov2.github.io](https://edwardzerov2.github.io)
 
