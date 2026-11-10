@@ -1,9 +1,23 @@
 const tabs = document.querySelectorAll(".tab");
 const page = document.querySelector("#page");
 const clock = document.querySelector("#clock");
+const themePicker = document.querySelector("#theme-picker");
 
 const validPages = [...tabs].map(tab => tab.dataset.page);
+const validThemes = [...themePicker.options].map(option => option.value);
 
+function setTheme(name) {
+    const theme = validThemes.includes(name) ? name : "monoyou";
+
+    document.documentElement.dataset.theme = theme;
+    themePicker.value = theme;
+
+    try {
+        localStorage.setItem("site-theme", theme);
+    } catch (error) {
+        console.warn("Não foi possível salvar o tema selecionado.", error);
+    }
+}
 
 async function changePage(name) {
 
@@ -38,7 +52,6 @@ async function changePage(name) {
 
 }
 
-
 function setActive(name) {
 
     tabs.forEach(tab => {
@@ -51,12 +64,9 @@ function setActive(name) {
 
 }
 
-
 tabs.forEach(tab => {
 
     tab.addEventListener("click", () => {
-
-        // guarda a aba na URL (#projects) para poder compartilhar o link
         history.replaceState(null, "", `#${tab.dataset.page}`);
 
         setActive(tab.dataset.page);
@@ -64,9 +74,6 @@ tabs.forEach(tab => {
     });
 
 });
-
-
-// Relógio do painel
 
 function updateClock() {
 
@@ -80,8 +87,15 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 15000);
 
+themePicker.addEventListener("change", () => setTheme(themePicker.value));
 
-// inicia na página do hash, ou em Sobre
+let savedTheme = "monoyou";
+try {
+    savedTheme = localStorage.getItem("site-theme") || savedTheme;
+} catch (error) {
+    console.warn("Não foi possível ler o tema salvo.", error);
+}
+setTheme(savedTheme);
 
 const start = location.hash.slice(1);
 

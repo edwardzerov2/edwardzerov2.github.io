@@ -1,23 +1,7 @@
 :root {
-    --background: #121214;
-    --panel: #161618;
-    --surface: #1a1a1c;
-    --surface-2: #202023;
-    --surface-active: #d1d1d1;
-    --border: #2a2a2e;
-    --text: #c6c6c6;
-    --text-dim: #7d7d84;
-    --text-highlight: #dfe0e0;
-    --text-on-active: #161618;
-    --accent: #1f3556;
-    --accent-text: #8fb4ec;
-    --ok: #7fc48f;
-    --warn: #e0b45c;
     --radius-win: 14px;
     --gap: 10px;
 }
-
-/* Reset */
 
 * {
     margin: 0;
@@ -32,8 +16,8 @@ html {
 body {
     min-height: 100vh;
     background:
-        radial-gradient(circle at 20% 10%, #1a1a1e 0%, transparent 55%),
-        radial-gradient(circle at 85% 90%, #17171b 0%, transparent 50%),
+        radial-gradient(circle at 20% 10%, var(--background-glow-1) 0%, transparent 55%),
+        radial-gradient(circle at 85% 90%, var(--background-glow-2) 0%, transparent 50%),
         var(--background);
     color: var(--text);
     font-family: "Monaspace Neon NF", "Monaspace Neon", "JetBrains Mono", "Fira Code", ui-monospace, monospace;
@@ -55,28 +39,16 @@ a:hover {
     outline-offset: 2px;
 }
 
-/* Estrutura principal */
-
 .app {
     width: min(96%, 1400px);
-    min-height: 100vh;
     margin: auto;
-    padding-bottom: 24px;
+    padding-bottom: 16px;
 }
-
-/* Painel superior (barra do KDE) */
 
 .header {
     display: flex;
     align-items: center;
-    gap: 16px;
     padding: 12px 0;
-}
-
-.launcher {
-    color: var(--text-dim);
-    font-size: 16px;
-    letter-spacing: 2px;
 }
 
 .tabs {
@@ -86,6 +58,24 @@ a:hover {
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 12px;
+}
+
+.theme-picker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 14px;
+    color: var(--text-dim);
+}
+
+.theme-picker select {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 10px;
+    background: var(--panel);
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
 }
 
 .tab {
@@ -101,7 +91,7 @@ a:hover {
 }
 
 .tab:hover {
-    background: #2a2a2e;
+    background: var(--surface-hover);
 }
 
 .tab.active {
@@ -122,8 +112,6 @@ a:hover {
     font-size: 15px;
 }
 
-/* Área de conteúdo */
-
 .page {
     animation: page-in .25s ease;
 }
@@ -133,25 +121,22 @@ a:hover {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Layout tiled */
-
 .tile {
     display: grid;
     gap: var(--gap);
 }
 
-.tile.about    { grid-template-columns: 1.7fr 1fr; grid-template-rows: auto auto; }
+.tile.about    { grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr); align-items: stretch; }
 .tile.projects { grid-template-columns: 1fr; }
-.tile.homelab  { grid-template-columns: 1fr 1.1fr; }
+.tile.homelab  { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: stretch; }
 
 .span-2 { grid-column: span 2; }
-
-/* Janela */
 
 .win {
     display: flex;
     flex-direction: column;
     min-width: 0;
+    min-height: 500px;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-win);
@@ -192,8 +177,6 @@ a:hover {
     color: var(--text-dim);
 }
 
-/* Botões de janela: ícones desenhados em SVG, todos do mesmo tamanho e alinhados */
-
 .wc {
     display: block;
     width: 22px;
@@ -208,7 +191,7 @@ a:hover {
 .wc-close { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 3l8 8M11 3l-8 8' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E"); }
 
 .win-body {
-    padding: 8px 18px 20px;
+    padding: 8px 18px 14px;
     flex: 1;
 }
 
@@ -224,8 +207,6 @@ a:hover {
 .toolbar span:first-child {
     color: var(--text);
 }
-
-/* Konsole */
 
 .term {
     font-size: 12.5px;
@@ -279,8 +260,6 @@ a:hover {
 
 @keyframes blink { 50% { opacity: 0; } }
 
-/* Lista de itens (links, ações rápidas) */
-
 .section-label {
     color: var(--text-highlight);
     font-weight: 600;
@@ -291,7 +270,7 @@ a:hover {
     background: var(--panel);
     border-radius: 10px;
     padding: 6px;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 }
 
 .list-item {
@@ -310,12 +289,6 @@ a.list-item:hover {
     text-decoration: none;
 }
 
-.list-item .ico {
-    width: 18px;
-    text-align: center;
-    color: var(--text-highlight);
-}
-
 .list-item strong {
     display: block;
     font-weight: 500;
@@ -328,8 +301,6 @@ a.list-item:hover {
     font-size: 11px;
 }
 
-/* Cartão do container (DistroShelf) */
-
 .container-card {
     display: flex;
     align-items: center;
@@ -337,22 +308,19 @@ a.list-item:hover {
     padding: 18px 20px;
     background: var(--accent);
     border-radius: 12px;
-    margin-bottom: 22px;
+    margin-bottom: 16px;
 }
 
-.container-card .badge {
-    width: 40px;
-    height: 40px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    background: #dfe6f3;
-    color: #1f3556;
-    font-weight: 700;
+.container-card .alpine-logo {
+    width: 48px;
+    height: 48px;
+    flex: none;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
 .container-card h3 {
-    color: #fff;
+    color: var(--text-on-accent);
     font-size: 20px;
 }
 
@@ -361,12 +329,10 @@ a.list-item:hover {
     font-size: 12px;
 }
 
-/* Gerenciador de arquivos (Dolphin) */
-
 .files {
     display: grid;
-    grid-template-columns: 190px 1fr;
-    min-height: 420px;
+    grid-template-columns: 190px minmax(0, 1fr);
+    flex: 1;
 }
 
 .places {
@@ -401,7 +367,7 @@ a.list-item:hover {
 .file-head,
 .file-row {
     display: grid;
-    grid-template-columns: 1fr 180px 240px;
+    grid-template-columns: minmax(120px, 1fr) minmax(100px, 180px) minmax(130px, 240px);
     gap: 12px;
     padding: 9px 16px;
     align-items: center;
@@ -441,7 +407,7 @@ a.file-row:focus-visible {
 .folder {
     width: 26px;
     height: 20px;
-    background: #c9c9cc;
+    background: var(--file-icon);
     border-radius: 3px 3px 4px 4px;
     position: relative;
 }
@@ -453,7 +419,7 @@ a.file-row:focus-visible {
     top: -4px;
     width: 11px;
     height: 5px;
-    background: #c9c9cc;
+    background: var(--file-icon);
     border-radius: 3px 3px 0 0;
 }
 
@@ -462,8 +428,6 @@ a.file-row:focus-visible {
     color: var(--text-dim);
     border-top: 1px solid var(--border);
 }
-
-/* Serviços (controle de volume) */
 
 .tabs-inner {
     display: flex;
@@ -532,8 +496,6 @@ a.file-row:focus-visible {
     color: var(--text-dim);
 }
 
-/* Responsivo */
-
 @media (max-width: 900px) {
     .tile.about,
     .tile.homelab { grid-template-columns: 1fr; }
@@ -541,6 +503,8 @@ a.file-row:focus-visible {
     .span-2 { grid-column: auto; }
 
     .fetch { flex-direction: column; gap: 16px; }
+
+    .win { min-height: 0; }
 
     .files { grid-template-columns: 1fr; }
     .places { display: none; }
@@ -552,6 +516,18 @@ a.file-row:focus-visible {
     .file-row span:last-child { display: none; }
 
     .tray span:not(.clock) { display: none; }
+}
+
+@media (max-width: 640px) {
+    .header { flex-wrap: wrap; gap: 8px; }
+
+    .theme-picker {
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .theme-picker select { flex: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

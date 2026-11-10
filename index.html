@@ -8,19 +8,16 @@
 
     <title>EdwardZeroV2</title>
 
+    <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-
 
 <body>
 
     <div class="app">
 
-        <!-- Painel superior -->
         <header class="header">
-
-            <span class="launcher" aria-hidden="true">⠿</span>
 
             <nav class="tabs" aria-label="Navegação principal">
 
@@ -30,6 +27,15 @@
 
             </nav>
 
+            <label class="theme-picker" for="theme-picker">
+                <span>Tema</span>
+                <select id="theme-picker" aria-label="Escolher tema">
+                    <option value="monoyou">MonoYou</option>
+                    <option value="monoyou-warm">MonoYou Warm</option>
+                    <option value="monoyou-cold">MonoYou Cold</option>
+                </select>
+            </label>
+
             <div class="tray">
                 <span class="net" title="Este site roda na EltenThor">EltenThor</span>
                 <time class="clock" id="clock">--:--</time>
@@ -37,17 +43,13 @@
 
         </header>
 
-
         <main class="content">
 
-            <section class="page" id="page">
-                <!-- O conteúdo das páginas entra aqui -->
-            </section>
+            <section class="page" id="page"></section>
 
         </main>
 
     </div>
-
 
     <script src="js/main.js"></script>
 
