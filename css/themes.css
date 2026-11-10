@@ -1,66 +1,66 @@
 :root {
     color-scheme: dark;
-    --background: #161616; /* island-2 */
-    --background-glow-1: #1d1d1d; /* surface-0 */
-    --background-glow-2: #181818; /* island-1 */
-    --panel: #181818; /* island-1 */
-    --surface: #1a1a1a; /* base */
-    --surface-2: #202020; /* surface-1 */
-    --surface-hover: #292929; /* overlay-0 */
-    --surface-active: #e0e0e0; /* accent */
-    --border: #292929; /* overlay-0 */
-    --text: #c6c6c6; /* text */
-    --text-dim: #929292; /* subtext */
-    --text-highlight: #e0e0e0; /* accent */
-    --text-on-active: #161616; /* island-2 */
-    --text-on-accent: #e0e0e0; /* accent */
-    --accent: #454545; /* overlay-1 */
-    --accent-text: #e0e0e0; /* accent */
-    --ok: #7fc48f;
-    --warn: #e0b45c;
-    --file-icon: #c6c6c6; /* text */
+    --background: #121212;
+    --background-glow-1: #1B1B1B;
+    --background-glow-2: #161616;
+    --panel: #161616;
+    --surface: #1B1B1B;
+    --surface-2: #222222;
+    --surface-hover: #2C2C2C;
+    --surface-active: #E0E0E0;
+    --border: #2C2C2C;
+    --text: #C6C6C6;
+    --text-dim: #929292;
+    --text-highlight: #E0E0E0;
+    --text-on-active: #121212;
+    --text-on-accent: #121212;
+    --accent: #4A4A4A;
+    --accent-text: #E0E0E0;
+    --ok: #7FC48F;
+    --warn: #E0B45C;
+    --file-icon: #C6C6C6;
 }
 
 :root[data-theme="monoyou-warm"] {
-    --background: #171513; /* island-2 */
-    --background-glow-1: #24201e; /* surface-0 */
-    --background-glow-2: #1a1816; /* island-1 */
-    --panel: #1a1816; /* island-1 */
-    --surface: #1e1b19; /* base */
-    --surface-2: #292522; /* surface-1 */
-    --surface-hover: #393431; /* overlay-0 */
-    --surface-active: #e4e2e0; /* accent */
-    --border: #393431; /* overlay-0 */
-    --text: #c8c3c0; /* text */
-    --text-dim: #a49d99; /* subtext */
-    --text-highlight: #e4e2e0; /* accent */
-    --text-on-active: #171513; /* island-2 */
-    --text-on-accent: #e4e2e0; /* accent */
-    --accent: #57514e; /* overlay-1 */
-    --accent-text: #e4e2e0; /* accent */
-    --ok: #9bc68d;
-    --warn: #e6ae62;
-    --file-icon: #c8c3c0; /* text */
+    --background: #121211;
+    --background-glow-1: #1B1A19;
+    --background-glow-2: #161514;
+    --panel: #161514;
+    --surface: #1B1A19;
+    --surface-2: #22211F;
+    --surface-hover: #2D2B28;
+    --surface-active: #E4E2DF;
+    --border: #2D2B28;
+    --text: #C8C5C1;
+    --text-dim: #A29E99;
+    --text-highlight: #E4E2DF;
+    --text-on-active: #121211;
+    --text-on-accent: #121211;
+    --accent: #514E49;
+    --accent-text: #E4E2DF;
+    --ok: #9BC68D;
+    --warn: #E6AE62;
+    --file-icon: #C8C5C1;
 }
 
 :root[data-theme="monoyou-cold"] {
-    --background: #161923; /* island-2 */
-    --background-glow-1: #1f222d; /* surface-0 */
-    --background-glow-2: #191c25; /* island-1 */
-    --panel: #191c25; /* island-1 */
-    --surface: #1c1f29; /* base */
-    --surface-2: #222631; /* surface-1 */
-    --surface-hover: #282d39; /* overlay-0 */
-    --surface-active: #dfe2e6; /* accent */
-    --border: #282d39; /* overlay-0 */
-    --text: #bcc2cb; /* text */
-    --text-dim: #9099a8; /* subtext */
-    --text-highlight: #dfe2e6; /* accent */
-    --text-on-active: #161923; /* island-2 */
-    --text-on-accent: #dfe2e6; /* accent */
-    --accent: #444b59; /* overlay-1 */
-    --accent-text: #dfe2e6; /* accent */
-    --ok: #7fc9aa;
-    --warn: #e1bd70;
-    --file-icon: #bcc2cb; /* text */
+    --background: #111214;
+    --background-glow-1: #191A1D;
+    --background-glow-2: #151619;
+    --panel: #151619;
+    --surface: #191B1F;
+    --surface-2: #202226;
+    --surface-hover: #292C32;
+    --surface-active: #DDE0E5;
+    --border: #292C32;
+    --text: #C0C4CC;
+    --text-dim: #9298A3;
+    --text-highlight: #DDE0E5;
+    --text-on-active: #111214;
+    --text-on-accent: #111214;
+    --accent: #454A53;
+    --accent-text: #DDE0E5;
+    --ok: #7FC9AA;
+    --warn: #E1BD70;
+    --file-icon: #C0C4CC;
 }
