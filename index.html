@@ -19,25 +19,33 @@
 
         <header class="header">
 
-            <nav class="tabs" aria-label="Navegação principal">
+            <nav class="tabs" aria-label="Navegação principal" data-i18n-aria="nav.label">
 
-                <button class="tab active" data-page="about">Sobre</button>
-                <button class="tab" data-page="projects">Projetos</button>
-                <button class="tab" data-page="homelab">HomeLab</button>
+                <button class="tab active" data-page="about" data-i18n="nav.about">Sobre</button>
+                <button class="tab" data-page="projects" data-i18n="nav.projects">Projetos</button>
+                <button class="tab" data-page="homelab" data-i18n="nav.homelab">HomeLab</button>
 
             </nav>
 
             <label class="theme-picker" for="theme-picker">
-                <span>Tema</span>
-                <select id="theme-picker" aria-label="Escolher tema">
+                <span data-i18n="picker.theme">Tema</span>
+                <select id="theme-picker" aria-label="Escolher tema" data-i18n-aria="picker.themeAria">
                     <option value="monoyou">MonoYou</option>
                     <option value="monoyou-warm">MonoYou Warm</option>
                     <option value="monoyou-cold">MonoYou Cold</option>
                 </select>
             </label>
 
+            <label class="language-picker" for="language-picker">
+                <span data-i18n="picker.language">Idioma</span>
+                <select id="language-picker" aria-label="Escolher idioma" data-i18n-aria="picker.languageAria">
+                    <option value="pt-BR">Português</option>
+                    <option value="en">English</option>
+                </select>
+            </label>
+
             <div class="tray">
-                <span class="net" title="Este site roda na EltenThor">EltenThor</span>
+                <span class="net" title="Este site roda na EltenThor" data-i18n-title="network.title">EltenThor</span>
                 <time class="clock" id="clock">--:--</time>
             </div>
 

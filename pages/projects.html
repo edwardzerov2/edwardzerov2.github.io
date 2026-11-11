@@ -2,7 +2,7 @@
 
     <article class="win">
         <div class="win-title">
-            <h2>Projetos — Dolphin</h2>
+            <h2 data-i18n="projects.windowTitle">Projetos — Dolphin</h2>
             <div class="win-controls" aria-hidden="true">
                 <span class="wc wc-min"></span><span class="wc wc-max"></span><span class="wc wc-close"></span>
             </div>
@@ -10,37 +10,27 @@
 
         <div class="toolbar" aria-hidden="true">
             <span>←  →</span>
-            <span>Início › Projetos</span>
+            <span id="project-breadcrumb" data-i18n="projects.breadcrumb">Início › Projetos</span>
         </div>
 
         <div class="files">
 
-            <aside class="places" aria-label="Locais">
-                <h3>Locais</h3>
-                <button class="place active">Projetos</button>
-                <h3 style="margin-top:18px">Remoto</h3>
+            <aside class="places" aria-label="Locais" data-i18n-aria="projects.locations">
+                <h3 data-i18n="projects.locations">Locais</h3>
+                <button class="place active" data-directory="projects" data-i18n="nav.projects">Projetos</button>
+                <button class="place" data-directory="monoyou">MonoYou</button>
+                <h3 data-i18n="projects.remote">Remoto</h3>
                 <a class="place" href="https://github.com/edwardzerov2" target="_blank" rel="noopener">GitHub</a>
             </aside>
 
-            <div>
+            <div class="file-content">
+            <div class="file-list" data-directory-view="projects">
 
                 <div class="file-head">
-                    <span>Nome</span>
-                    <span>Tipo</span>
-                    <span>Repositório</span>
+                    <span data-i18n="projects.name">Nome</span>
+                    <span data-i18n="projects.type">Tipo</span>
+                    <span data-i18n="projects.repository">Repositório</span>
                 </div>
-
-                <a class="file-row" href="https://github.com/edwardzerov2/MonoYou" target="_blank" rel="noopener">
-                    <span class="name"><span class="folder"></span>MonoYou</span>
-                    <span>Tema Qt e GTK</span>
-                    <span>edwardzerov2/MonoYou</span>
-                </a>
-
-                <a class="file-row" href="https://github.com/edwardzerov2/RustBoy" target="_blank" rel="noopener">
-                    <span class="name"><span class="folder"></span>RustBoy</span>
-                    <span>Rust</span>
-                    <span>edwardzerov2/RustBoy</span>
-                </a>
 
                 <a class="file-row" href="https://github.com/edwardzerov2/spudwave" target="_blank" rel="noopener">
                     <span class="name"><span class="folder"></span>Spudwave</span>
@@ -48,11 +38,39 @@
                     <span>edwardzerov2/spudwave</span>
                 </a>
 
+                <div class="status" data-i18n="projects.projectFolderCount">1 pasta</div>
+            </div>
+
+            <div class="file-list" data-directory-view="monoyou" hidden>
+                <div class="file-head">
+                    <span data-i18n="projects.name">Nome</span>
+                    <span data-i18n="projects.type">Tipo</span>
+                    <span data-i18n="projects.repository">Repositório</span>
+                </div>
+
+                <a class="file-row" href="https://github.com/edwardzerov2/monoyou-colors" target="_blank" rel="noopener">
+                    <span class="name"><span class="folder"></span>Colors</span>
+                    <span data-i18n="projects.colorScheme">Esquema de cores</span>
+                    <span>edwardzerov2/monoyou-colors</span>
+                </a>
+
+                <a class="file-row" href="https://github.com/edwardzerov2/monoyou-plasma" target="_blank" rel="noopener">
+                    <span class="name"><span class="folder"></span>Plasma</span>
+                    <span data-i18n="projects.plasmaTheme">Tema para KDE Plasma</span>
+                    <span>edwardzerov2/monoyou-plasma</span>
+                </a>
+
+                <a class="file-row" href="https://github.com/edwardzerov2/monoyou-gtk" target="_blank" rel="noopener">
+                    <span class="name"><span class="folder"></span>GTK</span>
+                    <span data-i18n="projects.gtkTheme">Tema para GTK</span>
+                    <span>edwardzerov2/monoyou-gtk</span>
+                </a>
+
+                <div class="status" data-i18n="projects.folderCount">3 pastas</div>
+            </div>
             </div>
 
         </div>
-
-        <div class="status">3 pastas</div>
     </article>
 
 </div>
